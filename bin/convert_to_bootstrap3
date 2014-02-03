@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+begin
+  require 'bundler'
+  Bundler.setup
+rescue Exception => e
+end
+
+require 'convert_to_bootstrap3'
+
+chatter = ConvertToBootstrap3::Convert.new
+chatter.convert_in_place
