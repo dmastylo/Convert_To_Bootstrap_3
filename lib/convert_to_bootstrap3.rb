@@ -1,6 +1,6 @@
-require "convert_to_boostrap3/version"
+require "convert_to_bootstrap3/version"
 
-module ConvertToBoostrap3
+module ConvertToBootstrap3
   class convert
 
     def convert_in_place

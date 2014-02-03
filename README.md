@@ -1,4 +1,4 @@
-# ConvertToBoostrap3
+# ConvertToBootstrap3
 
 WIP
 
@@ -8,7 +8,7 @@ A gem to convert all markup in .html and .html.erb files in a folder from Bootst
 
 Add this line to your application's Gemfile:
 
-  gem 'convert_to_boostrap3'
+  gem 'convert_to_bootstrap3'
 
 And then execute:
 
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-  $ gem install convert_to_boostrap3
+  $ gem install convert_to_bootstrap3
 
 ## Usage
 
@@ -24,7 +24,7 @@ TODO: Write usage instructions here
 
 ## Contributing
 
-1. Fork it ( http://github.com/dmastylo/convert_to_boostrap3/fork )
+1. Fork it ( http://github.com/dmastylo/convert_to_bootstrap3/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
