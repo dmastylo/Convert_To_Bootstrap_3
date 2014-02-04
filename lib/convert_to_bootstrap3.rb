@@ -29,14 +29,28 @@ module ConvertToBootstrap3
         file_contents = File.read(file)
 
         fill_in 'source', with: file_contents
-        all(:xpath, "//textarea[@id='source']").each { |a| puts a.value }
 
         click_button 'Convert This Code'
 
         all(:xpath, "//textarea[@id='result']").each do |a|
-          File.open(file, 'w+') { |f| f.write(a.value) }
+          result = fix_embedded_language_tags a.value
+          File.open(file, 'w+') { |f| f.write(result) }
         end
       end
+    end
+
+  private
+
+    def fix_embedded_language_tags(string)
+      fix_php_tags fix_ruby_tags string
+    end
+
+    def fix_ruby_tags(string)
+      string.gsub(/&lt;%=/, '<%=').gsub(/&lt;%#/, '<%#').gsub(/&lt;%-/, '<%-').gsub(/&lt;%/, '<%').gsub(/%&gt;/, '%>')
+    end
+
+    def fix_php_tags(string)
+      string.gsub(/(<!--)\?(php)/, '<?php').gsub(/(<!--)\?/, '<?').gsub(/\?(-->)/, '?>')
     end
 
   end
