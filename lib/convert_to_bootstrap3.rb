@@ -13,22 +13,32 @@ module ConvertToBootstrap3
   class Converter
     include Capybara::DSL
 
-    def convert_in_place
-      url = 'http://code.divshot.com/bootstrap3_upgrader/'
-      source = '<div class="span6">&#10;<a class="btn">Button</a>&#10;</div>'
-      visit url
+    attr_accessor :converter_url
+
+    def initialize
+      @converter_url = 'http://code.divshot.com/bootstrap3_upgrader/'
+    end
+
+    def convert_in_place!
+
+      visit @converter_url
       doc = Nokogiri::HTML(page.html)
 
-      fill_in 'source', with: source
-      all(:xpath, "//textarea[@id='source']").each { |a| puts a.value }
+      all_files = Dir.glob("**/*").reject { |file| File.directory? file }
 
-      click_button 'Convert This Code'
-      result = doc.css('#result').text.strip
-      puts result
+      all_files.each do |file|
+        file_contents = File.read(file)
 
-      all(:xpath, "//textarea[@id='result']").each { |a| puts a.value }
+        fill_in 'source', with: file_contents
+        all(:xpath, "//textarea[@id='source']").each { |a| puts a.value }
 
-      File.open('test_file', 'w+') { |f| f.write('testing') }
+        click_button 'Convert This Code'
+
+        all(:xpath, "//textarea[@id='result']").each do |a|
+          File.open(file, 'w+') { |f| f.write(a.value) }
+        end
+      end
+
     end
 
   end
