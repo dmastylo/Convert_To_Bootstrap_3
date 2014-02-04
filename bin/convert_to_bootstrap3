@@ -9,5 +9,5 @@ end
 
 require 'convert_to_bootstrap3'
 
-chatter = ConvertToBootstrap3::Convert.new
-chatter.convert_in_place
+converter = ConvertToBootstrap3::Converter.new
+converter.convert_in_place

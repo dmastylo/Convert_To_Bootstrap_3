@@ -4,6 +4,8 @@ WIP
 
 A gem to convert all markup in .html and .html.erb files in a folder from Bootstrap 2 into Bootstrap 3 markup.
 
+Requires PhantomJS headless browser.
+
 ## Installation
 
 Add this line to your application's Gemfile:
