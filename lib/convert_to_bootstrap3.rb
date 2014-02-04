@@ -25,21 +25,22 @@ module ConvertToBootstrap3
 
       all_files = Dir.glob('**/*.html*').reject { |file| File.directory? file }
 
-      all_files.each do |file|
-        file_contents = File.read(file)
-
-        fill_in 'source', with: file_contents
-
-        click_button 'Convert This Code'
-
-        all(:xpath, "//textarea[@id='result']").each do |a|
-          result = fix_embedded_language_tags a.value
-          File.open(file, 'w+') { |f| f.write(result) }
-        end
-      end
+      all_files.each { |file| convert_file_contents(file) }
     end
 
   private
+
+    def convert_file_contents(file)
+      file_contents = File.read(file)
+
+      fill_in 'source', with: file_contents
+      click_button 'Convert This Code'
+
+      all(:xpath, "//textarea[@id='result']").each do |a|
+        result = fix_embedded_language_tags a.value
+        File.open(file, 'w+') { |f| f.write(result) }
+      end
+    end
 
     def fix_embedded_language_tags(string)
       fix_php_tags fix_ruby_tags string
