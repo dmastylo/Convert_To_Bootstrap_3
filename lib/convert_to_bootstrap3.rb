@@ -21,7 +21,6 @@ module ConvertToBootstrap3
 
     def convert_in_place!
       visit @converter_url
-      doc = Nokogiri::HTML(page.html)
 
       all_files = Dir.glob('**/*.html*').reject { |file| File.directory? file }
 
