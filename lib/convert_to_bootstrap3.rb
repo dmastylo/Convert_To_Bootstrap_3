@@ -20,11 +20,10 @@ module ConvertToBootstrap3
     end
 
     def convert_in_place!
-
       visit @converter_url
       doc = Nokogiri::HTML(page.html)
 
-      all_files = Dir.glob("**/*").reject { |file| File.directory? file }
+      all_files = Dir.glob('**/*.html*').reject { |file| File.directory? file }
 
       all_files.each do |file|
         file_contents = File.read(file)
@@ -38,7 +37,6 @@ module ConvertToBootstrap3
           File.open(file, 'w+') { |f| f.write(a.value) }
         end
       end
-
     end
 
   end
