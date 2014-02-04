@@ -1,8 +1,7 @@
 # ConvertToBootstrap3
 
-WIP
-
-A gem to convert all markup in .html and .html.erb files in a folder from Bootstrap 2 into Bootstrap 3 markup.
+This gem converts all .html files in a folder from Bootstrap 2 into Bootstrap 3 markup. This includes
+language specific files like .html.erb, or others.
 
 Requires PhantomJS headless browser.
 
@@ -22,7 +21,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Go to the root folder of your project, and run the command
+
+````
+convert_to_bootstrap_3
+````
+
+This will go through all your files (including ones in subdirectories) and convert the markup from
+Bootstrap 2 to Bootstrap 3 markup. Spacing/tabbing and identation may, or may not, be
+altered in the process, and you should NOT consider this production ready code. Reviewing the
+results and making sure everything is correct manually is recommended, but this tool will
+considerably lessen your time spent converting the markup in your projects.
 
 ## Contributing
 
