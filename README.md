@@ -21,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-Go to the root folder of your project, and run the command
+Go to the root folder of your project, and run the command from a terminal or shell
 
 ````
 convert_to_bootstrap_3
