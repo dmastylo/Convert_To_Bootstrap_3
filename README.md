@@ -21,12 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-Go to the root folder of your project, and run the command from a terminal or shell
-
-````
-convert_to_bootstrap_3
-````
-
+Go to the root folder of your project, and run the command "convert_to_bootstrap_3" from a terminal or shell.
 This will go through all your files (including ones in subdirectories) and convert the markup from
 Bootstrap 2 to Bootstrap 3 markup. Spacing/tabbing and identation may, or may not, be
 altered in the process, and you should NOT consider this production ready code. Reviewing the
