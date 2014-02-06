@@ -46,7 +46,8 @@ module ConvertToBootstrap3
     end
 
     def fix_ruby_tags(string)
-      string.gsub(/&lt;%=/, '<%=').gsub(/&lt;%#/, '<%#').gsub(/&lt;%-/, '<%-').gsub(/&lt;%/, '<%').gsub(/%&gt;/, '%>')
+      string.gsub(/&lt;%=/, '<%=').gsub(/&lt;%#/, '<%#').gsub(/&lt;%-/, '<%-')
+            .gsub(/&lt;%/, '<%').gsub(/=&gt;/, '=>').gsub(/%&gt;/, '%>')
     end
 
     def fix_php_tags(string)
