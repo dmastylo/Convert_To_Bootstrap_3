@@ -28,6 +28,13 @@ altered in the process, and you should NOT consider this production ready code. 
 results and making sure everything is correct manually is recommended, but this tool will
 considerably lessen your time spent converting the markup in your projects.
 
+If you want to use ConvertToBootstrap3 in your code do
+
+  converter = ConvertToBootstrap3::Converter.new
+  converter.convert_in_place("directory/")
+
+the directory parameter is optional, but needs to have the forward slash at the end.
+
 ## Contributing
 
 1. Fork it ( http://github.com/dmastylo/convert_to_bootstrap3/fork )

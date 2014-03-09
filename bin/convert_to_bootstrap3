@@ -10,4 +10,4 @@ end
 require 'convert_to_bootstrap3'
 
 converter = ConvertToBootstrap3::Converter.new
-converter.convert_in_place!
+converter.convert_in_place
