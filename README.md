@@ -9,15 +9,21 @@ Requires PhantomJS headless browser.
 
 Add this line to your application's Gemfile:
 
-  gem 'convert_to_bootstrap3'
+```
+gem 'convert_to_bootstrap3'
+```
 
 And then execute:
 
-  $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-  $ gem install convert_to_bootstrap3
+```
+$ gem install convert_to_bootstrap3
+```
 
 ## Usage
 
@@ -30,8 +36,10 @@ considerably lessen your time spent converting the markup in your projects.
 
 If you want to use ConvertToBootstrap3 in your code do
 
-  converter = ConvertToBootstrap3::Converter.new
-  converter.convert_in_place("directory/")
+```
+converter = ConvertToBootstrap3::Converter.new
+converter.convert_in_place("directory/")
+```
 
 the directory parameter is optional, but needs to have the forward slash at the end.
 
