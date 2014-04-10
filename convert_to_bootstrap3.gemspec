@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['dmastylo@codequarry.net']
   spec.summary       = %q{ A gem to convert all markup in .html and .html.erb files in a folder from Bootstrap 2 into Bootstrap 3 markup. }
   spec.description   = %q{ A gem to convert all markup in .html and .html.erb files in a folder from Bootstrap 2 into Bootstrap 3 markup. }
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/dmastylo/Convert_To_Bootstrap_3'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,11 +20,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   # Runtime dependency
-  spec.add_runtime_dependency 'capybara', '>= 0'
-  spec.add_runtime_dependency 'poltergeist'
+  spec.add_runtime_dependency 'capybara', '~> 2.2'
+  spec.add_runtime_dependency 'poltergeist', '~> 1.5'
 
   # Development Dependencies
   spec.add_development_dependency 'bundler', '~> 1.5'
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rake', '~> 10.2'
 end

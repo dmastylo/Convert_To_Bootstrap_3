@@ -21,7 +21,7 @@ module ConvertToBootstrap3
 
     def convert_in_place(directory = "")
       directory << '**/*.html*'
-      
+
       visit @converter_url
 
       all_files = Dir.glob(directory).reject { |file| File.directory? file }
