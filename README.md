@@ -1,8 +1,9 @@
 # ConvertToBootstrap3
 
 This gem converts all .html files in a folder from Bootstrap 2.x into Bootstrap 3.0.2 markup. This includes
-language specific files like .html.erb, or others.
+language specific files like .html.erb, or others. You need an active internet connection to use this gem.
 
+# Dependencies
 Requires PhantomJS headless browser.
 
 ## Installation
